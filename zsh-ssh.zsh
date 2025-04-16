@@ -160,14 +160,12 @@ _fzf_list_generator() {
     host_list=$(_ssh_host_list)
   fi
 
-  header="
-Alias|->|Hostname|User|Desc
-─────|──|────────|────|────
-"
-
-  host_list="${header}\n${host_list}"
-
-  echo $host_list | command column -t -s '|'
+  # print header + body one line at a time
+  {
+    printf "Alias|->|Hostname|User|Desc\n"
+    printf "─────|──|────────|────|────\n"
+    printf "%s\n" "$host_list"
+  } | column -t -s '|'
 }
 
 _set_lbuffer() {
