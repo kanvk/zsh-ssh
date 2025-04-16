@@ -2,6 +2,8 @@
 
 Better host completion for ssh in Zsh.
 
+Forked from [zsh-ssh](https://github.com/sunlei/zsh-ssh). I've made some minor improvements to address issues I've had with the plugin
+
 [![asciicast](https://asciinema.org/a/381405.svg)](https://asciinema.org/a/381405)
 
 - [zsh-ssh](#zsh-ssh)
